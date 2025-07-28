@@ -1,0 +1,27 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://pranav19:pass123@cluster0.veq95.mongodb.net/microservices?retryWrites=true&w=majority
+      database: microServices
+  application:
+    name: RATING-SERVICE
+
+  config:
+    import: configserver:https://config-server-microservices-hotel.onrender.com
+#
+#  profiles:
+#    active: dev
+
+server:
+  port: 8083
+
+
+Eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: https://service-regsistry-microservices-hotel.onrender.com/
+
