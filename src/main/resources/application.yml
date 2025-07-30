@@ -19,6 +19,9 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
+    instance-id: rating-service-microservices-hotel.onrender.com/
+    status-page-url: https://rating-service-microservices-hotel.onrender.com/actuator/info
+    health-check-url: https://rating-service-microservices-hotel.onrender.com/health
   client:
     fetch-registry: true
     register-with-eureka: true
